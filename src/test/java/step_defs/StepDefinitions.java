@@ -5,6 +5,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import static com.codeborne.selenide.CollectionCondition.sizeGreaterThanOrEqual;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -23,11 +24,12 @@ public class StepDefinitions {
 
     @When("I click button 'Google Search'")
     public void iClickButtonGoogleSearch() {
-        $$("input[value='Google Search']").find(visible).click();
+        $$("center input").shouldHave(sizeGreaterThanOrEqual(2)).filter(visible)
+                .find(attributeMatching("value", "^.*Google$")).click();
     }
 
     @Then("I see that search results contains {string}")
     public void iSeeThatSearchResultsContains(String string) {
-        $x("//h1[text()='Search Results']").sibling(0).shouldHave(text(string));
+        $("div[id='rso']").shouldHave(text(string));
     }
 }
