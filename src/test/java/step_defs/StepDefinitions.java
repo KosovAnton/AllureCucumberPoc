@@ -25,7 +25,7 @@ public class StepDefinitions {
     @When("I click button 'Google Search'")
     public void iClickButtonGoogleSearch() {
         $$("center input").shouldHave(sizeGreaterThanOrEqual(2)).filter(visible)
-                .find(attributeMatching("value", "^.*Google$")).click();
+                .find(attributeMatching("value", "^.*Google.*$")).click();
     }
 
     @Then("I see that search results contains {string}")
