@@ -37,5 +37,4 @@ public class CucumberTest extends AbstractTestNGCucumberTests {
     public void afterScenario() {
         Selenide.closeWindow();
     }
-
 }
