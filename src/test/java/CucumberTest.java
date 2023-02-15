@@ -28,6 +28,7 @@ public class CucumberTest extends AbstractTestNGCucumberTests {
                 "AllureSelenide",
                 new AllureSelenide()
                         .screenshots(true)
+                        .savePageSource(false)
         );
     }
 
