@@ -51,6 +51,7 @@ public class CucumberTest extends AbstractTestNGCucumberTests {
         selenoidOptions.put("enableVideo", false);
         selenoidOptions.put("acceptInsecureCerts", true);
 
+        Configuration.reportsFolder = "target/allure-results";
         Configuration.browserCapabilities.setCapability("selenoid:options", selenoidOptions);
         Configuration.remote = "http://172.20.10.2:4444/wd/hub/";
     }
