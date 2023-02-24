@@ -52,6 +52,6 @@ public class CucumberTest extends AbstractTestNGCucumberTests {
         selenoidOptions.put("acceptInsecureCerts", true);
 
         Configuration.browserCapabilities.setCapability("selenoid:options", selenoidOptions);
-        Configuration.remote = "http://192.168.1.231:4444/wd/hub/";
+        Configuration.remote = "http://192.168.1.113:4444/wd/hub/";
     }
 }
