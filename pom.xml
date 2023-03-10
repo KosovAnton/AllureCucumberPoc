@@ -16,7 +16,7 @@
         <aspectj.version>1.9.1</aspectj.version>
         <allure.version>2.21.0</allure.version>
         <cucumber.version>7.10.1</cucumber.version>
-        <selenide.version>6.11.2</selenide.version>
+        <selenide.version>6.12.2</selenide.version>
     </properties>
 
     <dependencies>
